@@ -1,0 +1,10 @@
+/.next
+/build
+/coverage
+/public
+/out
+/.reg
+/next-env.d.ts
+**/*.js
+**/*.module.css.d.ts
+**/*.css.d.ts
