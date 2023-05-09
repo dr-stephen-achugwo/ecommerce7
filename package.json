@@ -1,0 +1,45 @@
+{
+  "name": "ecommerce7",
+  "version": "0.1.0",
+  "license": "MIT",
+  "packageManager": "pnpm@7.28.0",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "build": "next build && next-sitemap --config sitemap.config.js",
+    "build:lhci": "next build",
+    "start": "next start",
+    "test": "pnpm vitest:all",
+    "vitest": "vitest run related",
+    "vitest:all": "vitest run related /src",
+    "coverage": "vitest run --coverage",
+    "e2e": "playwright test playwright",
+    "sb": "storybook dev -p 6006 -c .storybook",
+    "build-storybook": "storybook build --output-dir=build/storybook/static",
+    "test-storybook": "test-storybook --maxWorkers=2",
+    "storycap": "storycap --serverCmd 'storybook dev -p 6006 -c .storybook' http://localhost:6006 --serverTimeout 600000",
+    "chromatic": "source .env && chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --auto-accept-changes",
+    "lint": "pnpm secretlint && pnpm hcm && pnpm ts-prune && pnpm eslint && pnpm stylelint && pnpm markuplint && pnpm prettier",
+    "lint:ci": "pnpm secretlint && pnpm hcm && pnpm ts-prune && pnpm eslint && pnpm stylelint && pnpm markuplint && pnpm prettier:ci",
+    "prettier": "prettier --cache --cache-strategy metadata --write .",
+    "prettier:ci": "prettier --cache --write .",
+    "eslint": "eslint --ext .jsx,.js,.tsx,.ts --cache --fix ./src",
+    "markuplint": "markuplint **/*.tsx",
+    "stylelint": "stylelint '**/*.css' --fix",
+    "secretlint": "secretlint **/*",
+    "hcm": "hcm 'src/**/*.module.css'",
+    "ts-prune": "ts-prune --ignore '(src/pages|src/middleware|stories.tsx|playwright/*)' | (! grep -v 'used in module')",
+    "hygen": "hygen generator new",
+    "prepare": "husky install",
+    "deduplicate": "pnpm-deduplicate"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,json,yml,yaml}": [
+      "pnpm lint",
+      "pnpm test"
+    ]
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,76 @@
+{
+  "Font Family": {
+    "$type": "fontFamily",
+    "tokens": {
+      "body": {
+        "$value": "Arial, sans-serif, -apple-system, system-ui, BlinkMacSystemFont, \"Helvetica Neue\", Helvetica"
+      }
+    }
+  },
+  "Shadows": {
+    "$type": "shadows",
+    "tokens": {
+      "light": {
+        "$value": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
+      }
+    }
+  },
+  "Radius": {
+    "$type": "radius",
+    "tokens": {
+      "circle": {
+        "$value": "50%"
+      },
+      "large": {
+        "$value": "0.5rem"
+      },
+      "default": {
+        "$value": "0.25rem"
+      }
+    }
+  },
+  "Width": {
+    "$type": "width",
+    "tokens": {
+      "1/2": {
+        "$value": "47.5%"
+      }
+    }
+  },
+  "Breakpoints": {
+    "$type": "breakpoints",
+    "tokens": {
+      "2xl": {
+        "min": {
+          "$value": "1536px"
+        }
+      },
+      "xl": {
+        "min": {
+          "$value": "1280px"
+        },
+        "max": {
+          "$value": "1535px"
+        }
+      },
+      "lg": {
+        "min": {
+          "$value": "1024px"
+        },
+        "max": {
+          "$value": "1279px"
+        }
+      },
+      "md": {
+        "min": {
+          "$value": "501px"
+        }
+      },
+      "sm": {
+        "max": {
+          "$value": "500px"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { getColorAndSize } from './getColorAndSize'
