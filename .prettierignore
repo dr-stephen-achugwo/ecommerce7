@@ -1,0 +1,10 @@
+/.next
+/build
+/coverage
+/public
+/out
+/.reg
+pnpm-lock.yaml
+
+**/*.css.d.ts
+**/*.css.d.ts.map
