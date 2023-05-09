@@ -1,0 +1,14 @@
+@import './base.css';
+@import './components.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @supports not (backdrop-filter: blur(16px)) {
+    .fireFoxBackdropFilter {
+      background: rgb(255 255 255 / 80%);
+    }
+  }
+}

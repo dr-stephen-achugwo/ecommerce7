@@ -1,0 +1,185 @@
+:root {
+  --primary: #fff;
+  --primary-2: #f1f3f5;
+  --secondary: #000;
+  --secondary-2: #111;
+  --text-base: #000;
+  --text-primary: #000;
+  --text-secondary: white;
+  --hover: rgb(0 0 0 / 7.5%);
+  --hover-1: rgb(0 0 0 / 15%);
+  --hover-2: rgb(0 0 0 / 25%);
+  --cyan: #22b8cf;
+  --green: #37b679;
+  --red: #da3c3c;
+  --pink: #e64980;
+  --purple: #f81ce5;
+  --blue: #0070f3;
+  --violet-light: #7048e8;
+  --violet: #5f3dc4;
+  --black: #000;
+  --brown: #a52a2a;
+  --charcoal: #464646;
+  --chocolate: #d2691e;
+  --grey: #808080;
+  --lightGrey: #cdcdcd;
+  --taupeMarl: #483c32;
+  --ink: #016270;
+  --lightGreyMarl: #cdcdcd;
+  --cinderMarl: #22282c;
+  --taupe: #483c32;
+  --military: #4b5320;
+  --greyMarl: #808080;
+  --deepOcean: #2a4b5f;
+  --cadetGreen: #5f9ea0;
+  --vintageBlack: #18130e;
+  --chalkWhite: #e0dbd1;
+  --nights: #332e2e;
+  --opticWhite: #fff;
+  --tempestBlue: #79839b;
+  --oliveGreen: #b2b266;
+  --putty: #cdae70;
+  --ivory: #fffff0;
+  --accents-0: #f8f9fa;
+  --accents-1: #f1f3f5;
+  --accents-2: #e9ecef;
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: var(--secondary);
+}
+
+.dark {
+  --primary: #000;
+  --primary-2: #111;
+  --secondary: #fff;
+  --secondary-2: #f1f3f5;
+  --hover: rgb(255 255 255 / 7.5%);
+  --hover-1: rgb(0 0 0 / 15%);
+  --hover-2: rgb(0 0 0 / 25%);
+  --text-base: white;
+  --text-primary: white;
+  --text-secondary: black;
+  --accents-0: #212529;
+  --accents-1: #343a40;
+  --accents-2: #495057;
+  --tw-bg-opacity: 0;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+  touch-action: manipulation;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  color: var(--text-primary);
+  background-color: var(--primary);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+/* Fixed footer */
+footer {
+  margin-top: auto;
+}
+
+/* Prevent zooming when filling out forms in iOS. */
+input,
+select {
+  font-size: 16px;
+  transform: scale(0.8);
+}
+
+/* Fix background color when using autocomplete in forms */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px var(--primary) inset;
+}
+
+/* Focus styles */
+:is(a, button, div):focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+}
+
+/* next/future/image in Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  img[loading='lazy'] {
+    clip-path: inset(0.5px);
+  }
+}
+
+/* h-screen in mobile Safari */
+@supports (-webkit-touch-callout: none) {
+  /* stylelint-disable-next-line selector-class-pattern */
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Text design */
+h1 {
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
+  outline: none;
+}
+
+h2 {
+  font-size: 1.25em !important;
+  font-weight: 600 !important;
+  outline: none;
+}
+
+.text ol {
+  padding-left: 1rem;
+}
+
+.text h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px var(--secondary-2);
+}
+
+/* Workaround to support prefers-reduced-motion in Toast */
+/* stylelint-disable-next-line a11y/media-prefers-reduced-motion */
+.toast {
+  animation: toast 0.3s;
+}
+
+@keyframes toast {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
