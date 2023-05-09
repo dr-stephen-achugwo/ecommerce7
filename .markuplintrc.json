@@ -1,0 +1,22 @@
+{
+  "extends": ["markuplint:recommended-react"],
+  "parser": {
+    ".[jt]sx?$": "@markuplint/jsx-parser"
+  },
+  "specs": {
+    ".[jt]sx?$": "@markuplint/react-spec"
+  },
+  "excludeFiles": ["./node_modules/**/*", "./.reg/**/*"],
+  "overrides": {
+    "./src/pages/_app.tsx": {
+      "rules": {
+        "parse-error": false
+      }
+    },
+    "./src/pages/api/og.tsx": {
+      "rules": {
+        "required-attr": false
+      }
+    }
+  }
+}
