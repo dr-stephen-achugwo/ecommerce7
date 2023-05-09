@@ -1,0 +1,24 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "plugins": ["stylelint-order", "stylelint-a11y"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen", "layer"]
+      }
+    ],
+    "order/order": ["custom-properties", "declarations"],
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "value-no-vendor-prefix": null,
+    "font-family-name-quotes": null,
+    "property-no-vendor-prefix": null,
+    "at-rule-no-vendor-prefix": null,
+    "custom-property-pattern": null,
+    "import-notation": null,
+    "value-keyword-case": null,
+    "a11y/media-prefers-reduced-motion": true,
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true
+  }
+}
