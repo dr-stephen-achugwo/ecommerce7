@@ -1,0 +1,18 @@
+.categories {
+  @apply flex items-start overflow-x-scroll pt-4 pb-6 pl-6;
+
+  /* Scrolling becomes inertial */
+  -webkit-overflow-scrolling: touch;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Safari */
+  outline: none;
+}
+
+/* Hide the scroll bars. */
+.categories::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
+}

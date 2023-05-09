@@ -1,0 +1,134 @@
+.square {
+  @apply inline-flex cursor-pointer items-center justify-center rounded border border-transparent px-10 py-2 text-center font-semibold leading-6 text-accents-1 shadow transition duration-150 ease-in-out;
+}
+
+@screen md {
+  .square:hover,
+  .square:focus {
+    @apply border border-secondary;
+  }
+}
+
+.square:active {
+  @apply border border-secondary;
+}
+
+.circle {
+  @apply flex h-14 w-14 items-center justify-center rounded-circle border border-secondary text-secondary;
+}
+
+.notChoose {
+  @apply opacity-50;
+}
+
+.loading {
+  @apply cursor-not-allowed;
+}
+
+.default {
+  @apply !bg-secondary;
+}
+
+.black {
+  @apply !bg-black;
+}
+
+.white {
+  @apply !bg-white;
+}
+
+.brown {
+  @apply !bg-brown;
+}
+
+.charcoal {
+  @apply !bg-charcoal;
+}
+
+.chocolate {
+  @apply !bg-chocolate;
+}
+
+.grey {
+  @apply !bg-grey;
+}
+
+.lightGrey {
+  @apply !bg-lightGrey;
+}
+
+.taupeMarl {
+  @apply !bg-taupeMarl;
+}
+
+.ink {
+  @apply !bg-ink;
+}
+
+.lightGreyMarl {
+  @apply !bg-lightGreyMarl;
+}
+
+.cadetGreen {
+  @apply !bg-cadetGreen;
+}
+
+.red {
+  @apply !bg-red;
+}
+
+.cinderMarl {
+  @apply !bg-cinderMarl;
+}
+
+.taupe {
+  @apply !bg-taupe;
+}
+
+.military {
+  @apply !bg-military;
+}
+
+.greyMarl {
+  @apply !bg-greyMarl;
+}
+
+.deepOcean {
+  @apply !bg-deepOcean;
+}
+
+.vintageBlack {
+  @apply !bg-vintageBlack;
+}
+
+.chalkWhite {
+  @apply !bg-chalkWhite;
+}
+
+.nights {
+  @apply !bg-nights;
+}
+
+.opticWhite {
+  @apply !bg-opticWhite;
+}
+
+.tempestBlue {
+  @apply !bg-tempestBlue;
+}
+
+.oliveGreen {
+  @apply !bg-oliveGreen;
+}
+
+.putty {
+  @apply !bg-putty;
+}
+
+.ivory {
+  @apply !bg-ivory;
+}
+
+.green {
+  @apply !bg-green;
+}
